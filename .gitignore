@@ -1,0 +1,6 @@
+spider/env/
+**/__pycache__/
+*.pyc
+spider/last_command.wav
+models/whisper.cpp/
+*.bin
