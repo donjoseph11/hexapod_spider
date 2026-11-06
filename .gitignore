@@ -1,6 +1,35 @@
+# Python environments and generated interpreter files
+**/.venv/
+**/venv/
 spider/env/
 **/__pycache__/
-*.pyc
+*.py[cod]
+
+# Local audio captures and extracted datasets
+Audio/
+audio/
+recordings/
+variants/
 spider/last_command.wav
+**/detections/
+*.wav
+*.mp3
+*.flac
+*.ogg
+*.m4a
+
+# Downloaded speech and wake-word models, and compiled whisper.cpp output
+models/vosk/
 models/whisper.cpp/
+models/wakeword/
 *.bin
+
+# Benchmark output and logs
+results/
+*.csv
+*.xlsx
+*.log
+
+# Local machine configuration
+.env
+.DS_Store

@@ -1,0 +1,12 @@
+# Dependencies for the root benchmark and preprocessing tools.
+numpy
+scipy
+pandas
+openpyxl
+psutil
+vosk
+librosa
+soundfile
+noisereduce
+faster-whisper
+transformers
