@@ -16,7 +16,7 @@ from runtime_config import WAKEWORD_MODEL, WHISPER_BIN, WHISPER_DIR, movement
 download_models()
 # --- Paths ---
 WHISPER_MODEL = WHISPER_DIR / "ggml-tiny.en.bin"
-NOD_SCRIPT = movement("Interactions/Nod.py")
+NOD_SCRIPT = movement("Interactions/nod.py")
 DANCE_SCRIPT = movement("Dance/dance3_lite.py")
 MOVE_SCRIPT = movement("Forward/forward.py")
  

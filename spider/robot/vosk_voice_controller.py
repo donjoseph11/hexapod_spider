@@ -19,7 +19,7 @@ download_models()
 # ============================================================================
 # HOW THIS WORKS
 #   1. Listens for the wake word "hey spider".
-#   2. Nods the head (Nod.py) to show it's listening.
+#   2. Nods the head (nod.py) to show it's listening.
 #   3. Records what you say, transcribes it with whisper.cpp.
 #   4. parse_command() pulls out a direction + number + unit.
 #   5. Routes to the matching script:
@@ -37,16 +37,16 @@ download_models()
 # --- Paths ---
 VOSK_MODEL_PATH = VOSK_MODEL
 
-NOD_SCRIPT = movement("Interactions/Nod.py")
+NOD_SCRIPT = movement("Interactions/nod.py")
 DANCE_SCRIPT = movement("Dance/dance3_lite.py")
 FORWARD_SCRIPT = movement("Forward/forward.py")
 BACKWARD_SCRIPT = movement("Backward/backward.py")
 LEFT_SCRIPT = movement("Left/left.py")
 RIGHT_SCRIPT = movement("Right/right.py")
 REST_SCRIPT = movement("Rest/rest.py")
-TURNAROUND_SCRIPT = movement("Turn_Around/turn_around.py")
-HI_SCRIPT = movement("Interactions/Hi.py")
-NOPE_SCRIPT = movement("Interactions/Nope.py")
+TURNAROUND_SCRIPT = movement("turn_around/turn_around.py")
+HI_SCRIPT = movement("Interactions/say_hi.py")
+NOPE_SCRIPT = movement("Interactions/say_no.py")
 
 # --- Command names (what parse_command returns) ---
 DANCE    = "dance"

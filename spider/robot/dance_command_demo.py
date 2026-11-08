@@ -155,7 +155,7 @@ try:
             if score > WAKE_THRESHOLD and (now - last_detection) > COOLDOWN_SECONDS:
                 print(f"\n=== WAKE WORD: {wakeword} ({score:.2f}) ===")
                 last_detection = now
-                subprocess.run([sys.executable, movement("Interactions/Nod.py")], timeout=10)
+                subprocess.run([sys.executable, movement("Interactions/nod.py")], timeout=10)
                 command_audio = record_command()
                 #command_audio=None
                 if command_audio:

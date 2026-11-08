@@ -32,7 +32,7 @@ do not directly control the hexapod.
 | [`tools/preprocessing/preprocess_denoise.py`](../tools/preprocessing/preprocess_denoise.py) | Denoising and resampling experiment |
 | [`tools/preprocessing/run_preprocessing_all_models.py`](../tools/preprocessing/run_preprocessing_all_models.py) | Runs complete preprocessing benchmark sweeps |
 | [`tools/preprocessing/repair.py`](../tools/preprocessing/repair.py) | Repairs failed preprocessing outputs |
-| [`tools/preprocessing/retry2.py`](../tools/preprocessing/retry2.py) | Fallback repair strategies for time-stretch failures |
+| [`tools/preprocessing/retry_failed_preprocessing.py`](../tools/preprocessing/retry_failed_preprocessing.py) | Fallback repair strategies for time-stretch failures |
 | [`tools/dataset/extract_audio.py`](../tools/dataset/extract_audio.py) | Extracts supported audio files from ZIP archives |
 | [`tools/legacy/legacy_stt_benchmark.py`](../tools/legacy/legacy_stt_benchmark.py) | Older benchmark design retained for historical comparison |
 

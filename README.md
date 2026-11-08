@@ -31,7 +31,7 @@ the local-only assets section below.
 | [`tools/preprocessing/preprocess_denoise.py`](tools/preprocessing/preprocess_denoise.py) | Denoising preprocessing | Research experiment |
 | [`tools/preprocessing/run_preprocessing_all_models.py`](tools/preprocessing/run_preprocessing_all_models.py) | Runs the two preprocessing benchmark conditions | Research experiment |
 | [`tools/dataset/extract_audio.py`](tools/dataset/extract_audio.py) | Extracts audio from source archives | Dataset preparation |
-| [`tools/preprocessing/repair.py`](tools/preprocessing/repair.py), [`retry2.py`](tools/preprocessing/retry2.py) | Recovery tools for failed preprocessing files | One-off recovery tools |
+| [`tools/preprocessing/repair.py`](tools/preprocessing/repair.py), [`retry_failed_preprocessing.py`](tools/preprocessing/retry_failed_preprocessing.py) | Recovery tools for failed preprocessing files | One-off recovery tools |
 | [`tools/benchmark/net_latency_bench.py`](tools/benchmark/net_latency_bench.py) | Network/cloud speech latency experiment | Separate experiment |
 | [`tools/legacy/legacy_stt_benchmark.py`](tools/legacy/legacy_stt_benchmark.py) | Earlier benchmark design | Legacy; do not use for new runs |
 
@@ -130,7 +130,7 @@ python3 -m compileall -q \
   tools/preprocessing/preprocess.py \
   tools/preprocessing/preprocess_amplitude.py \
   tools/preprocessing/preprocess_denoise.py \
-  tools/preprocessing/repair.py tools/preprocessing/retry2.py \
+  tools/preprocessing/repair.py tools/preprocessing/retry_failed_preprocessing.py \
   tools/benchmark/run_all.py \
   tools/preprocessing/run_preprocessing_all_models.py \
   tools/benchmark/stt_benchmark.py spider

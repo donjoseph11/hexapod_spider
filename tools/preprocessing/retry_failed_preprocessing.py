@@ -1,5 +1,5 @@
 """
-retry2.py - last-resort repair for files still hitting the ffmpeg 6.1
+retry_failed_preprocessing.py - last-resort repair for files still hitting ffmpeg 6.1
 'best_input >= 0' filtergraph assertion, which is triggered by atempo.
 
 STRATEGIES, tried in order per file:
@@ -14,7 +14,7 @@ of the paired comparison. The deleted list is written to excluded.txt so the
 same utterances can be removed from the baseline arm at analysis time.
 
 USAGE
-    python3 tools/preprocessing/retry2.py --variants ./variants
+    python3 tools/preprocessing/retry_failed_preprocessing.py --variants ./variants
 """
 
 import argparse
