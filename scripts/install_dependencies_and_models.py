@@ -19,6 +19,10 @@ VOSK_ROOT = MODEL_ROOT / "vosk"
 WHISPER_ROOT = MODEL_ROOT / "whisper.cpp"
 WAKEWORD_ROOT = MODEL_ROOT / "wakeword"
 WHISPER_REPOSITORY = "https://github.com/ggerganov/whisper.cpp.git"
+OPENWAKEWORD_SOURCE = (
+    "openwakeword @ git+https://github.com/dscripka/openWakeWord.git"
+    "@368c03716d1e92591906a84949bc477f3a834455"
+)
 
 VOSK_MODELS = {
     "vosk-model-small-en-us-0.15": (
@@ -42,6 +46,10 @@ def run(command: list[str]) -> None:
 def install_dependencies() -> None:
     run([sys.executable, "-m", "pip", "install", "-r", "requirements-robot.txt"])
     run([sys.executable, "-m", "pip", "install", "-r", "requirements-benchmark.txt"])
+    # openWakeWord declares speexdsp-ns on Linux, but the robot uses its
+    # default model path with Speex suppression disabled. Its other runtime
+    # dependencies are pinned explicitly in requirements-robot.txt.
+    run([sys.executable, "-m", "pip", "install", "--no-deps", OPENWAKEWORD_SOURCE])
 
 
 def download_zip(url: str, destination: Path) -> None:

@@ -57,9 +57,12 @@ python3 -m pip install -r requirements-benchmark.txt
 ```
 
 The robot requirements intentionally do not include `speexdsp-ns`: the robot
-runtime does not use it, and its available Raspberry Pi ARM64 wheel targets
-CPython 3.10 rather than the Python 3.13 environment supplied by current
-Raspberry Pi OS images.
+runtime does not enable openWakeWord's optional Speex suppression, and its
+available Raspberry Pi ARM64 wheel targets CPython 3.10 rather than the
+Python 3.13 environment supplied by current Raspberry Pi OS images. The setup
+script installs the pinned openWakeWord source with `--no-deps` because its
+Linux dependency metadata otherwise attempts to install that incompatible
+optional package.
 
 The movement scripts also require the Freenove robot server modules (`control`,
 `servo`, `ultrasonic`, and `buzzer`) from the robot kit. Those modules are
