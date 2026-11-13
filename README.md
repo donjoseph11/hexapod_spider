@@ -56,6 +56,11 @@ Benchmark and preprocessing scripts have additional dependencies:
 python3 -m pip install -r requirements-benchmark.txt
 ```
 
+The robot requirements intentionally do not include `speexdsp-ns`: the robot
+runtime does not use it, and its available Raspberry Pi ARM64 wheel targets
+CPython 3.10 rather than the Python 3.13 environment supplied by current
+Raspberry Pi OS images.
+
 The movement scripts also require the Freenove robot server modules (`control`,
 `servo`, `ultrasonic`, and `buzzer`) from the robot kit. Those modules are
 hardware/vendor dependencies and are not part of this repository.
